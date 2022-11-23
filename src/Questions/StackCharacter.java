@@ -4,20 +4,20 @@ public final class StackCharacter {
     private char[] stack;
     private int top;
     private int size;
-    private final boolean enLargeWhenFull;
+    private final boolean enlargeWhenFull;
 
-    public StackCharacter(int size, boolean enLargeWhenFull) {
+    public StackCharacter(int size, boolean enlargeWhenFull) {
         this.size = size;
         stack = new char[size];
         top = -1;
-        this.enLargeWhenFull = enLargeWhenFull;
+        this.enlargeWhenFull = enlargeWhenFull;
     }
 
     public synchronized void push(char value) {
         if (isFull()) {
             throw new RuntimeException("Stack is full");
         } else {
-            if (enLargeWhenFull && isFull()) {
+            if (enlargeWhenFull && isFull()) {
                 enLargeArray();
             }
             stack[++top] = value;

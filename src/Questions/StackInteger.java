@@ -5,20 +5,20 @@ public final class StackInteger {
     private int[] stack;
     private int top;
     private int size;
-    private final boolean enLargeWhenFull;
+    private final boolean enlargeWhenFull;
 
-    public StackInteger(int size, boolean enLargeWhenFull) {
+    public StackInteger(int size, boolean enlargeWhenFull) {
         this.size = size;
         stack = new int[size];
         top = -1;
-        this.enLargeWhenFull = enLargeWhenFull;
+        this.enlargeWhenFull = enlargeWhenFull;
     }
 
     public synchronized void push(int value) {
         if (isFull()) {
             throw new RuntimeException("Stack is full");
         } else {
-            if (enLargeWhenFull && isFull()) {
+            if (enlargeWhenFull && isFull()) {
                 enLargeArray();
             }
             stack[++top] = value;
