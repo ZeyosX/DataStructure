@@ -15,9 +15,4 @@ public final class Question2 {
         }
         return i;
     }
-
-    public static void main(String[] args) {
-        System.out.println(gcd(35, 21));
-        System.out.println(gcd(8, 15));
-    }
 }

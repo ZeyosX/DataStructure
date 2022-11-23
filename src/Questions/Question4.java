@@ -24,8 +24,4 @@ public final class Question4 {
         }
         return stack.pop();
     }
-
-    public static void main(String[] args) {
-        System.out.println(Power(10, 5));
-    }
 }

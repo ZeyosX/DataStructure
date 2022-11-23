@@ -76,14 +76,4 @@ public final class Question1 {
         }
         return stack.pop();
     }
-
-    public static void main(String[] args) {
-        String exp = "5 + 2 * (30 - 10/5)";
-
-        System.out.println("Infix Expression: " + exp);
-        System.out.println("Postfix Expression: " + ConvertToPostfix(exp));
-        System.out.println("Value of the postfix expression: " + calculatePostfix(ConvertToPostfix(exp)));
-
-    }
-
 }
